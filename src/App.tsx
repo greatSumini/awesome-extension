@@ -1,4 +1,8 @@
+import { useActiveTabUrl } from './hooks/chrome.hook';
+
 function App() {
+  const url = useActiveTabUrl();
+
   return (
     <div className="App">
       <header className="App-header">
@@ -14,6 +18,7 @@ function App() {
           Learn React
         </a>
       </header>
+      {url}
     </div>
   );
 }
